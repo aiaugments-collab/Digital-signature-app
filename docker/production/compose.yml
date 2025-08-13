@@ -1,25 +1,8 @@
 name: documenso-production
 
 services:
-  database:
-    image: postgres:15
-    environment:
-      - POSTGRES_USER=${POSTGRES_USER:?err}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:?err}
-      - POSTGRES_DB=${POSTGRES_DB:?err}
-    healthcheck:
-      test: ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER}']
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    volumes:
-      - database:/var/lib/postgresql/data
-
   documenso:
     image: documenso/documenso:latest
-    depends_on:
-      database:
-        condition: service_healthy
     environment:
       - PORT=${PORT:-3000}
       - NEXTAUTH_SECRET=${NEXTAUTH_SECRET:?err}
@@ -66,4 +49,3 @@ services:
       - /opt/documenso/cert.p12:/opt/documenso/cert.p12
 
 volumes:
-  database:
