@@ -1,0 +1,63 @@
+# Database Configuration (Using Neon)
+POSTGRES_USER=neondb_owner
+POSTGRES_PASSWORD=npg_z2pPNLvcf9mY
+POSTGRES_DB=neondb
+NEXT_PRIVATE_DATABASE_URL=postgresql://neondb_owner:npg_z2pPNLvcf9mY@ep-muddy-moon-adz93qvr-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+NEXT_PRIVATE_DIRECT_DATABASE_URL=postgresql://neondb_owner:npg_z2pPNLvcf9mY@ep-muddy-moon-adz93qvr-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+
+# Application Configuration
+PORT=3000
+NEXT_PUBLIC_WEBAPP_URL=https://signatureapp.augment.cfd
+NEXT_PRIVATE_INTERNAL_WEBAPP_URL=http://localhost:3000
+
+# Authentication & Security
+NEXTAUTH_SECRET=a8f9d7e6c5b4a3d2e1f0g9h8i7j6k5l4m3n2o1p0
+NEXT_PRIVATE_ENCRYPTION_KEY=x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m6n7o8p9q0
+NEXT_PRIVATE_ENCRYPTION_SECONDARY_KEY=q0p9o8n7m6l5k4j3i2h1g0f9e8d7c6b5a4z3y2x1
+
+# Google OAuth (optional)
+NEXT_PRIVATE_GOOGLE_CLIENT_ID=your_google_client_id_here
+NEXT_PRIVATE_GOOGLE_CLIENT_SECRET=your_google_client_secret_here
+
+# Email Configuration (SMTP)
+NEXT_PRIVATE_SMTP_TRANSPORT=smtp-auth
+NEXT_PRIVATE_SMTP_HOST=smtp.gmail.com
+NEXT_PRIVATE_SMTP_PORT=587
+NEXT_PRIVATE_SMTP_USERNAME=your_email@gmail.com
+NEXT_PRIVATE_SMTP_PASSWORD=your_app_password_here
+NEXT_PRIVATE_SMTP_APIKEY_USER=your_smtp_apikey_user_here
+NEXT_PRIVATE_SMTP_APIKEY=your_smtp_apikey_here
+NEXT_PRIVATE_SMTP_SECURE=true
+NEXT_PRIVATE_SMTP_FROM_NAME=SignatureApp
+NEXT_PRIVATE_SMTP_FROM_ADDRESS=noreply@augment.cfd
+NEXT_PRIVATE_SMTP_SERVICE=your_smtp_service_here
+
+# Alternative Email Services (optional - use instead of SMTP)
+NEXT_PRIVATE_RESEND_API_KEY=re_your_resend_api_key_here
+NEXT_PRIVATE_MAILCHANNELS_API_KEY=your_mailchannels_api_key_here
+NEXT_PRIVATE_MAILCHANNELS_ENDPOINT=your_mailchannels_endpoint_here
+NEXT_PRIVATE_MAILCHANNELS_DKIM_DOMAIN=your_dkim_domain_here
+NEXT_PRIVATE_MAILCHANNELS_DKIM_SELECTOR=your_dkim_selector_here
+NEXT_PRIVATE_MAILCHANNELS_DKIM_PRIVATE_KEY=your_dkim_private_key_here
+
+# File Upload Configuration
+NEXT_PUBLIC_UPLOAD_TRANSPORT=database
+NEXT_PRIVATE_UPLOAD_ENDPOINT=your_s3_endpoint_here
+NEXT_PRIVATE_UPLOAD_FORCE_PATH_STYLE=false
+NEXT_PRIVATE_UPLOAD_REGION=us-east-1
+NEXT_PRIVATE_UPLOAD_BUCKET=your_bucket_name_here
+NEXT_PRIVATE_UPLOAD_ACCESS_KEY_ID=your_access_key_id_here
+NEXT_PRIVATE_UPLOAD_SECRET_ACCESS_KEY=your_secret_access_key_here
+
+# Optional: Disable signup if needed
+NEXT_PUBLIC_DISABLE_SIGNUP=false
+
+# Document signing certificate path (optional for testing)
+NEXT_PRIVATE_SIGNING_LOCAL_FILE_PATH=/opt/documenso/cert.p12
+NEXT_PRIVATE_SIGNING_PASSPHRASE=your_cert_passphrase_here
+
+# Analytics (optional)
+NEXT_PUBLIC_POSTHOG_KEY=phc_your_posthog_key_here
+
+# Optional: Document size limit (in bytes)
+NEXT_PUBLIC_DOCUMENT_SIZE_UPLOAD_LIMIT=50000000
